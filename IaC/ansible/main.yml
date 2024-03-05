@@ -1,8 +1,6 @@
 ---
 - hosts: localhost
   tasks:
-  - name: Creamos un bucket S3
-    aws_s3:
-      bucket: my-digitalhouse-stored
-      mode: create
-      
+    - name: Creamos un bucket S3
+      amazon.aws.s3_bucket:
+        name: my-bucket-clase5
